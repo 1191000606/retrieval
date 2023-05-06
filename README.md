@@ -1,7 +1,7 @@
 出发点：ChatGPT出现后，如RAG、Realm的检索增强的方式不能简单迁移到大模型上去，因此我们决定探索检索这种方式如何增强大语言模型，我们着重研究如何将检索到的文档融入大语言模型中，是需要重新训练语言模型（如Retro）还是可以在已有的LM上进行SFT，又或者只用优化语言模型的输入？
 
 # 目前几种LLM利用检索文本的方式
-关键词：retrieval read, knowledge injection
+关键词：retrieval reader model, knowledge injection
 
 1. Retro：为decoder-only LLM加几层Chunk Cross Attention，然后训练
     - Retro官方：
@@ -38,3 +38,4 @@
 In-Context:
 1. In-Context Retrieval-Augmented Language Models；BM25选Top1、或者在Top25中选最好的、使用LM来进行Ranker
 2. Standing on the Shoulders of Giant Frozen Language Models；进行总结，2w token-> 2k token
+····
